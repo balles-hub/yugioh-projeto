@@ -1,4 +1,3 @@
-
 /* ===== CABEÇALHO COM IMAGEM DE FUNDO ===== */
 header.site-header {
   background: url('tent.png') no-repeat center top; /* mantém a imagem centralizada horizontalmente, mas mostra o topo vertical */
@@ -459,3 +458,4 @@ header h2 {
     max-width: 100%;
   }
 }
+
