@@ -194,7 +194,26 @@ header h2 {
   color: #111;
 }
 
+/* ===== PLACEHOLDER ===== */
+#placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
 
+#placeholder img {
+  width: 250px;
+  max-width: 80%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+#placeholder p {
+  font-size: 1rem;
+  color: #ccc;
+}
 
 /* ===== AVISOS ===== */
 .aviso {
