@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Yu-Gi-Oh! Coleção de Cartas</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Cabeçalho compacto -->
+  <header class="site-header">
+
+    <h2>⚡ Cartas e Anime: Tudo Aqui!</h2>
+
+    <div class="busca">
+      <input type="text" id="inputBusca" placeholder="Digite o nome da carta...">
+      <button id="btnBuscar">🔍</button>
+      <button id="btnLimpar">🧹</button>
+    </div>
+
+    <button id="btnMostrarFavoritos">❤️ Coleção de Duelista</button>
+    <button id="btnVerAnime">🎥 Ver Anime</button> <!-- 👈 NOVO BOTÃO -->
+  </header>
+
+  <!-- Placeholder quando não há cartas nem favoritos -->
+  <div id="placeholder">
+    <img src="https://via.placeholder.com/300x200.png?text=Yu-Gi-Oh!" alt="Colecione suas cartas" />
+    <p>Pesquise ou adicione cartas aos favoritos!</p>
+  </div>
+
+  <!-- Container de cartas encontradas -->
+  <div class="cards" id="cards"></div>
+
+  <!-- Lista de favoritos -->
+  <section id="favoritos-section" style="display:none;">
+    <h2 id="h2-minhas-cartas">Minhas cartas favoritas</h2>
+    <div class="cards" id="favoritos"></div>
+  </section>
+
+
+  <!-- Temporadas e episódios serão carregados aqui via JS -->
+<section id="ygo-temporadas" class="ygo-temporadas-container">
+</section>
+
+<!-- Modal de vídeo -->
+<div id="ygo-modal" class="ygo-modal hidden">
+  <div class="ygo-modal-content">
+    <span id="ygo-fechar" class="ygo-fechar">&times;</span>
+    <video id="ygo-player" controls></video>
+    <h2 id="ygo-titulo"></h2>
+  </div>
+</div>
+
+<!-- Seção de História de Yu-Gi-Oh! -->
+<section id="historia-yu-gi-oh">
+  <h2>História de Yu-Gi-Oh!</h2>
+  
+  <div class="historia-secao">
+    <h3>Origem</h3>
+    <p>
+      Yu-Gi-Oh! começou como um mangá criado por Kazuki Takahashi em 1996. A história gira em torno de <strong>Yugi Mutou</strong>, um garoto tímido que resolve enigmas e quebra-cabeças.  
+      Seu maior achado é o <strong>“Quebra-Cabeça do Milênio”</strong>, um antigo artefato egípcio que abriga o espírito de um misterioso faraó.
+    </p>
+    <img src="logo.png" alt="">
+  </div>
+
+  <div class="historia-secao">
+    <h3>O Faraó e os Jogos</h3>
+    <p>
+      Quando Yugi resolve o quebra-cabeça, ele desperta o espírito do faraó, que se torna seu alter ego nos momentos de perigo.  
+      Juntos, eles enfrentam inimigos em desafios chamados <strong>“Shadow Games”</strong>, jogos com apostas misteriosas que testam coragem e inteligência.
+    </p>
+  </div>
+
+  <div class="historia-secao">
+    <h3>O Card Game</h3>
+    <p>
+      O foco da história evolui para o <strong>Duel Monsters</strong>, um jogo de cartas estratégico.  
+      Yugi e seus amigos (Joey, Téa e Tristan) participam de torneios para derrotar vilões e proteger o mundo de ameaças sobrenaturais.
+    </p>
+  </div>
+
+  <div class="historia-secao">
+    <h3> Aventuras e Torneios</h3>
+    <p>
+      Yugi enfrenta diversos vilões ao longo das sagas:  
+      - Kaiba, que quer sempre vencê-lo.  
+      - Marik, com os Shadow Games do milênio.  
+      - Outros duelistas em torneios nacionais e internacionais.  
+      Cada duelo mistura estratégia, amizade e magia antiga.
+    </p>
+  </div>
+
+  <div class="historia-secao">
+    <h3>Legado</h3>
+    <p>
+      Yu-Gi-Oh! evoluiu para anime, jogos de cartas e videogames, tornando-se uma das franquias mais populares do mundo.  
+      A história combina aventura, estratégia e o clássico lema: <strong>“Quem é o verdadeiro rei dos jogos?”</strong>
+    </p>
+  </div>
+</section>
+
+
+
+
+
+  <script src="script.js"></script>
+
+  <!--
+    Dados das cartas fornecidos por YGOPRODeck API
+    https://db.ygoprodeck.com/api-guide/
+  -->
+
+</body>
+</html>

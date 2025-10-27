@@ -1,0 +1,461 @@
+
+/* ===== CABEÇALHO COM IMAGEM DE FUNDO ===== */
+header.site-header {
+  background: url('tent.png') no-repeat center top; /* mantém a imagem centralizada horizontalmente, mas mostra o topo vertical */
+  background-size: cover; /* preenche o header sem alterar a altura */
+  padding: 20px 0; /* mantém o padding original */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* Sobreposição escura para melhor contraste do texto */
+header.site-header.bg-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* ajuste a opacidade conforme precisar */
+  z-index: 0;
+}
+
+/* Faz o conteúdo do header ficar acima da sobreposição */
+header.site-header.bg-header * {
+  position: relative;
+  z-index: 1;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2e2e3f);
+  color: #fff;
+  text-align: center;
+}
+
+/* ===== CABEÇALHO COMPACTO ===== */
+header.site-header {
+  background-color: #111;
+  padding: 10px 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #f1c40f;
+  text-shadow: 1px 1px 6px #000;
+  margin: 0;
+   font-style: italic;
+}
+
+#h2-minhas-cartas {
+   font-size: 1.5rem;
+  color: #f1c40f;
+  text-shadow: 1px 1px 6px #000;
+  margin: 0;
+  font-style: italic;
+
+}
+
+/* ===== BUSCA ===== */
+.busca {
+  margin: 10px 0;
+}
+
+.busca input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 5px;
+  outline: none;
+   font-style: italic;
+}
+
+/* Botões da busca (🔍 e 🧹) */
+.busca button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+
+.busca button:hover {
+  background-color: #f1c40f;/* Azul ao passar o mouse */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #2196f3;
+}
+
+/* ===== BOTÕES PRINCIPAIS ===== */
+#btnMostrarFavoritos,
+#btnVerAnime {
+  margin: 10px 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+   font-style: italic;
+}
+
+/* Favoritos */
+#btnMostrarFavoritos {
+  background-color: #45a049;
+  color: #111;
+}
+
+#btnMostrarFavoritos:hover {
+  background-color: #f1c40f;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #45a049;
+}
+
+/* Ver Anime — mesmo estilo, só que com destaque dourado */
+#btnVerAnime {
+  background-color: #f1c40f; /* Amarelo ouro */
+  color: #111;
+}
+
+#btnVerAnime:hover {
+  background-color: #ffdb4d;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #f1c40f;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.card {
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #45a049;
+}
+
+.card h3 {
+  margin: 8px 0 5px;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #45a049;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #f1c40f;
+  color: #111;
+}
+
+/* ===== PLACEHOLDER ===== */
+#placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#placeholder img {
+  width: 250px;
+  max-width: 80%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+#placeholder p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* ===== AVISOS ===== */
+.aviso {
+  color: #ff5555;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media screen and (max-width: 600px) {
+  .busca input {
+    width: 65%;
+    margin-bottom: 8px;
+  }
+
+  .busca button {
+    width: 30%;
+    margin-bottom: 8px;
+  }
+
+  .cards {
+    gap: 10px;
+  }
+
+  .card {
+    width: 140px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .card p {
+    height: 40px;
+  }
+}
+
+/* ===== SEÇÃO DO ANIME ===== */
+.ygo-temporadas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.ygo-temporada {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.ygo-temporada:hover {
+  border-color: #f1c40f;
+  transform: translateY(-3px);
+}
+
+.ygo-temporada-titulo {
+  font-size: 1.4rem;
+  color: #f1c40f;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ygo-temporada-titulo::after {
+  content: "▼";
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.ygo-temporada.ativa .ygo-temporada-titulo::after {
+  transform: rotate(180deg);
+}
+
+.ygo-episodios {
+  display: none;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(241, 196, 15, 0.5);
+}
+
+.ygo-temporada.ativa .ygo-episodios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.ygo-episodio {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ygo-episodio:hover {
+  background: rgba(241, 196, 15, 0.2);
+  transform: scale(1.03);
+}
+
+.ygo-episodio h3 {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* ===== MODAL ===== */
+.ygo-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+.ygo-modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ygo-modal-content {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  animation: ygo-aparecer 0.3s ease;
+}
+
+@keyframes ygo-aparecer {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+#ygo-player {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.ygo-fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #f1c40f;
+  cursor: pointer;
+}
+
+#ygo-titulo {
+  margin-top: 0.8rem;
+  color: #f1c40f;
+}
+
+
+
+/* ===== HISTÓRIA DE YU-GI-OH! ===== */
+
+
+/* ===== SEÇÃO HISTÓRIA ===== */
+#historia-yu-gi-oh {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  backdrop-filter: blur(8px);
+  text-align: left;
+  color: #fff;
+  font-family: 'Merriweather', serif; /* fonte dos parágrafos */
+  line-height: 1.6rem;
+}
+
+/* Título principal */
+#historia-yu-gi-oh h2 {
+  font-family: 'Montserrat', sans-serif; /* fonte elegante para títulos */
+  font-size: 2rem;
+  color: #f1c40f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 6px #000;
+  font-weight: 700;
+}
+
+/* Subtítulos das seções */
+#historia-yu-gi-oh .historia-secao h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: #f1c40f;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px #000;
+  font-weight: 500;
+}
+
+/* Texto dos parágrafos */
+#historia-yu-gi-oh .historia-secao p {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+/* Imagens dentro da história */
+#historia-yu-gi-oh .historia-secao img {
+  display: block;
+  max-width: 200px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media screen and (max-width: 600px) {
+  #historia-yu-gi-oh {
+    padding: 1rem;
+  }
+
+  #historia-yu-gi-oh h2 {
+    font-size: 1.6rem;
+  }
+
+  #historia-yu-gi-oh .historia-secao h3 {
+    font-size: 1.2rem;
+  }
+
+  #historia-yu-gi-oh .historia-secao p {
+    font-size: 0.95rem;
+  }
+
+  #historia-yu-gi-oh .historia-secao img {
+    max-width: 100%;
+  }
+}
