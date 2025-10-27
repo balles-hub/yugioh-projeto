@@ -201,6 +201,8 @@ header h2 {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  font-style: italic;
+  color: #45a049;
 }
 
 #placeholder img {
