@@ -60,6 +60,10 @@ header h2 {
   font-style: italic;
 
 }
+#pesquise-adi {
+  font-style: italic;
+  color: #45a049;
+}
 
 /* ===== BUSCA ===== */
 .busca {
