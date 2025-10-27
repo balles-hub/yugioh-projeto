@@ -239,6 +239,48 @@ modal.addEventListener("click", e => {
 carregarEpisodios();
 
 
+//Historia
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Seleciona o cabeçalho
+  const header = document.querySelector(".site-header");
+
+  // Cria o botão "📜 História"
+  const btnHistoria = document.createElement("button");
+  btnHistoria.id = "btnHistoria";
+  btnHistoria.textContent = "📜 História";
+  btnHistoria.style.marginLeft = "5px";
+
+  // Adiciona o botão ao cabeçalho (junto dos outros)
+  if (header) {
+    header.appendChild(btnHistoria);
+  }
+
+  // Pega a seção da história
+  const historiaSecao = document.querySelector("#historia-yu-gi-oh");
+
+  // Esconde a seção ao carregar
+  if (historiaSecao) {
+    historiaSecao.style.display = "none";
+  }
+
+  // Alterna visibilidade ao clicar no botão
+  btnHistoria.addEventListener("click", () => {
+    if (!historiaSecao) return;
+
+    if (historiaSecao.style.display === "none") {
+      historiaSecao.style.display = "block";
+      btnHistoria.textContent = "❌ Fechar História";
+    } else {
+      historiaSecao.style.display = "none";
+      btnHistoria.textContent = "📜 História";
+    }
+  });
+});
+
+
+
+
 
 
 

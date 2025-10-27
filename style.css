@@ -60,9 +60,11 @@ header h2 {
   font-style: italic;
 
 }
+
 #pesquise-adi {
   font-style: italic;
   color: #45a049;
+
 }
 
 /* ===== BUSCA ===== */
@@ -101,7 +103,7 @@ header h2 {
 
 /* ===== BOTÕES PRINCIPAIS ===== */
 #btnMostrarFavoritos,
-#btnVerAnime {
+#btnVerAnime, #btnHistoria {
   margin: 10px 5px;
   padding: 8px 16px;
   border: none;
@@ -114,7 +116,7 @@ header h2 {
 }
 
 /* Favoritos */
-#btnMostrarFavoritos {
+#btnMostrarFavoritos,#btnHistoria {
   background-color: #45a049;
   color: #111;
 }
@@ -133,6 +135,12 @@ header h2 {
 
 #btnVerAnime:hover {
   background-color: #ffdb4d;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #f1c40f;
+}
+
+#btnHistoria:hover {
+  background-color: #ffdb4d; /* Tom mais claro ao passar o mouse */
   transform: scale(1.05);
   box-shadow: 0 0 10px #f1c40f;
 }
@@ -462,4 +470,3 @@ header h2 {
     max-width: 100%;
   }
 }
-
