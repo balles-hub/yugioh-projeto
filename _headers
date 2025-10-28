@@ -9,4 +9,7 @@
     img-src 'self' https://res.cloudinary.com; 
     media-src 'self' https://res.cloudinary.com; 
     script-src 'self' https://your-render-domain.com; 
-    connect-src 'self' https://your-render-domain.com;
+    connect-src 'self' https://your-render-domain.com; 
+    style-src 'self' https://fonts.googleapis.com; 
+    font-src 'self' https://fonts.gstatic.com;
+
