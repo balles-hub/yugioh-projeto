@@ -4,4 +4,9 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Content-Security-Policy: default-src 'self'; img-src 'self' https:; script-src 'self' https:; style-src 'self' https: 'unsafe-inline';
+  Content-Security-Policy: 
+    default-src 'self'; 
+    img-src 'self' https://res.cloudinary.com; 
+    media-src 'self' https://res.cloudinary.com; 
+    script-src 'self' https://your-render-domain.com; 
+    connect-src 'self' https://your-render-domain.com;
