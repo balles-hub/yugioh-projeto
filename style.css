@@ -470,3 +470,41 @@ header h2 {
     max-width: 100%;
   }
 }
+  
+/* Alerta style */ 
+.alert-box {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  border: 2px solid #00bfff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+  color: #ffffff;
+  font-size: 1.2rem;
+  max-width: 400px;
+  gap: 15px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  animation: slideIn 0.5s ease-out;
+}
+
+.alert-box img {
+  width: 50px;
+  height: 50px;
+}
+
+.close-btn {
+  margin-left: auto;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #00bfff;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

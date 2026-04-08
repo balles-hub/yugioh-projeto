@@ -281,7 +281,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+function closeAlert() {
+  const alertBox = document.getElementById('welcomeAlert');
+  alertBox.style.display = 'none';
+}
 
+// Mostrar automaticamente depois de 1 segundo (opcional)
+setTimeout(() => {
+  const alertBox = document.getElementById('welcomeAlert');
+  alertBox.style.display = 'flex';
+}, 1000);
 
 
 
