@@ -281,8 +281,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.getElementById('close-alert').addEventListener('click', () => {
-  document.getElementById('welcome-alert').style.display = 'none';
+// Mostra o alerta ao carregar a página
+window.addEventListener('load', () => {
+    const alertBox = document.getElementById('duelistAlert');
+    const closeBtn = document.getElementById('closeAlert');
+
+    alertBox.style.display = 'block';
+
+    closeBtn.addEventListener('click', () => {
+        alertBox.style.display = 'none';
+    });
+
+    // Fecha automático após 5 segundos
+    setTimeout(() => {
+        alertBox.style.display = 'none';
+    }, 5000);
 });
 
 

@@ -472,40 +472,51 @@ header h2 {
 }
   
 /* Alerta style */ 
-#welcome-alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.85);
-  color: #fff;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  z-index: 1000;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/* Container centralizado */
+.alert-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85); /* transparente moderno */
+    color: #fff;
+    padding: 25px 40px;
+    border-radius: 15px;
+    text-align: center;
+    display: none; /* inicialmente oculto */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    max-width: 90%;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
 }
 
-#welcome-alert img {
-  width: 80px;  /* ajuste conforme a imagem */
-  height: auto;
+/* Imagem dentro do alert */
+.alert-image {
+    width: 120px;   /* maior que antes */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
 }
 
-#welcome-alert button {
-  background: #ffcc00;
-  border: none;
-  padding: 5px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
+/* Texto */
+.alert-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-#welcome-alert button:hover {
-  background: #ffdd33;
+/* Botão fechar */
+.alert-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.alert-close:hover {
+    color: #ff4b2b;
 }
