@@ -472,39 +472,40 @@ header h2 {
 }
   
 /* Alerta style */ 
-.alert-box {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-  border: 2px solid #00bfff;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-  color: #ffffff;
-  font-size: 1.2rem;
-  max-width: 400px;
-  gap: 15px;
+#welcome-alert {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-  animation: slideIn 0.5s ease-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.alert-box img {
-  width: 50px;
-  height: 50px;
+#welcome-alert img {
+  width: 80px;  /* ajuste conforme a imagem */
+  height: auto;
 }
 
-.close-btn {
-  margin-left: auto;
+#welcome-alert button {
+  background: #ffcc00;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.2rem;
-  color: #00bfff;
+  transition: 0.2s;
 }
 
-@keyframes slideIn {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+#welcome-alert button:hover {
+  background: #ffdd33;
 }
